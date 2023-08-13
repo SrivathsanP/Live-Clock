@@ -1,7 +1,8 @@
-body{
+body {
     background-color: #252B48;
 }
-.container{
+
+.container {
     margin: 100px;
     padding: 100px;
     display: flex;
@@ -10,20 +11,20 @@ body{
     height: 100%;
 }
 
-.clock{
+.clock {
     width: 350px;
     height: 350px;
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     background: url(clock.jpg);
-    background-size:cover;
+    background-size: cover;
     border: 4px solid #252A48;
     border-radius: 50%;
 }
 
-.clock:before{
-    content:"";
+.clock:before {
+    content: "";
     position: absolute;
     width: 15px;
     height: 15px;
@@ -34,46 +35,51 @@ body{
 
 .clock .hour,
 .clock .min,
-.clock .sec{
+.clock .sec {
     position: absolute;
 }
 
-.clock .hour, .hr{
+.clock .hour,
+.hr {
     width: 160px;
     height: 160px;
 }
 
-.clock .min, .mn{
+.clock .min,
+.mn {
     width: 190px;
     height: 190px;
 }
 
-.clock .sec, .sc{
+.clock .sec,
+.sc {
     width: 230px;
     height: 230px;
 }
 
-.hr, .mn, .sc{
+.hr,
+.mn,
+.sc {
     display: flex;
     justify-content: center;
     position: absolute;
     border-radius: 50%;
 }
 
-.hr::before{
-    content:"";
+.hr::before {
+    content: "";
     position: absolute;
     width: 8px;
     height: 80px;
     background-color: #e49c0d;
     z-index: 10;
-    border-radius:6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
 }
 
 
 
-.mn::before{
-    content:"";
+.mn::before {
+    content: "";
     position: absolute;
     width: 5px;
     height: 90px;
@@ -84,12 +90,62 @@ body{
 
 
 
-.sc::before{
-    content:'';
+.sc::before {
+    content: '';
     position: absolute;
     width: 2px;
     height: 150px;
     background: #ffff;
     z-index: 12;
     border-radius: 6px 6px 0 0;
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin: 40px;
+        padding: 40px;
+    }
+
+    .clock {
+        width: 250px;
+        height: 250px;
+    }
+
+    .clock::before {
+        width: 8px;
+        height: 8px;
+    }
+
+    .clock .hour,
+    .hr {
+        width: 70px;
+        height: 70px;
+    }
+
+    .clock .min,
+    .mn {
+        width: 80px;
+        height: 80px;
+    }
+
+    .clock .sec,
+    .sc {
+        width: 110px;
+        height: 110px;
+    }
+
+    .hr::before {
+        width: 4px;
+        height: 40px;
+    }
+
+    .mn::before {
+        width: 3px;
+        height: 50px;
+    }
+
+    .sc::before {
+        width: 1px;
+        height: 80px;
+    }
 }
