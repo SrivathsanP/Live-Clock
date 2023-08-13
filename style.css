@@ -102,13 +102,13 @@ body {
 
 @media (max-width: 600px) {
     .container {
-        margin: 40px;
-        padding: 40px;
+        margin: 20px;
+        padding: 20px;
     }
 
     .clock {
-        width: 250px;
-        height: 250px;
+        width: 180px;
+        height: 180px;
     }
 
     .clock::before {
